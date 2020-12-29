@@ -42,16 +42,16 @@
             "dependsOn": [
                 "make debug"
             ],
-            "isBackground": false,
+            // "isBackground": false,
             "windows": {
                 "command": "C:/mGBA/mGBA.exe -g ${workspaceFolder}/${workspaceFolderBasename}.gba;sleep 5;echo debuggerReady"
             },
             "osx": {
-                "command": "${workspaceFolder}/mac_mgba.sh",
-                "args": [
-                    "-g",
-                    "${workspaceFolder}/${workspaceFolderBasename}.gba"
-                ]
+                "command": "open /Applications/mGBA.app --args -g ${workspaceFolder}/${workspaceFolderBasename}.gba;sleep 1;echo debuggerReady;echo debuggerReady",
+                // "args": [
+                //     "-g",
+                //     "${workspaceFolder}/${workspaceFolderBasename}.gba"
+                // ]
             },
             "presentation": {
                 "clear": true,
@@ -75,18 +75,18 @@
                   ],
                   "background": {
                     "activeOnStart": true,
-                    "beginsPattern": "debuggerReady",
-                    "endsPattern": "debuggerReady",
+                    "beginsPattern": "^.*debuggerReady.*$",
+                    "endsPattern": "^.*debuggerReady.*$"
                   }
                 }
               ]   
         },
-        // {
-        //     "label": "run",
-        //     "type": "shell",
-        //     "isBackground": true,
-        //     "command": "/Applications/mGBA.app/Contents/MacOS/mGBA ${workspaceFolder}/${workspaceFolderBasename}.elf",
-        //     "problemMatcher": [],
-        // }
+        {
+            "label": "run",
+            "type": "shell",
+            "isBackground": true,
+            "command": "/Applications/mGBA.app/Contents/MacOS/mGBA ${workspaceFolder}/${workspaceFolderBasename}.elf",
+            "problemMatcher": [],
+        }
     ]
 }
