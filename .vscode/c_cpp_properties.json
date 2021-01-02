@@ -3,23 +3,21 @@
         {
             "name": "Mac",
             "includePath": [
-                "/usr/include",
                 "/usr/local/include",
                 "${workspaceFolder}",
                 "${workspaceFolder}/include",
                 "/opt/devkitpro/devkitARM/arm-none-eabi/include",
-                "/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/8.1.0/include"
+                "/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/10.2.0/include"
             ],
             "defines": [],
             "intelliSenseMode": "clang-x64",
             "browse": {
                 "path": [
-                    "/usr/include",
                     "/usr/local/include",
                     "${workspaceFolder}",
                     "${workspaceFolder}/include",
                     "/opt/devkitpro/devkitARM/arm-none-eabi/include",
-                    "/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/8.1.0/include"
+                    "/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/10.2.0/include"
                 ],
                 "limitSymbolsToIncludedHeaders": true,
                 "databaseFilename": ""
