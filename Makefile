@@ -38,7 +38,7 @@ else
 	CFLAGS:= -g -Wall -O3 -mcpu=arm7tdmi -mtune=arm7tdmi -fomit-frame-pointer -ffast-math $(ARCH)
 endif
 
-CFLAGS	+=	$(INCLUDE)
+CFLAGS	+=	$(INCLUDE) -std=c11
 
 CXXFLAGS	:=	$(CFLAGS) -fno-rtti -fno-exceptions
 
